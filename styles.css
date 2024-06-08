@@ -4,6 +4,7 @@
   border: 1px solid blue;
   margin: auto;
   text-align: center;
+  box-sizing: border-box;
 }
 .h1_styles {
   margin-bottom: 100px;
