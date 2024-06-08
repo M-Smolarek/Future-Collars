@@ -1,0 +1,10 @@
+.div_styles {
+  width: 900px;
+  height: 500px;
+  border: 1px solid blue;
+  margin: auto;
+  text-align: center;
+}
+.h1_styles {
+  margin-bottom: 100px;
+}
