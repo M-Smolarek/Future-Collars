@@ -1,6 +1,7 @@
-.przycisk_styles {
-  border: 10px solid white;
+.przycisk {
+  border: 3px solid white;
   padding: 20px 40px 20px 40px;
-  background-color: black;
   color: white;
+  font-size: 16px;
+  background-color: black;
 }
