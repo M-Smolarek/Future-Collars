@@ -1,9 +1,9 @@
 body {
   color: #3f3f3f;
 }
-:h1_style {
+.h1_style {
   font-size: 32px;
 }
-:h2_style {
+.h2_style {
   font-size: 24px;
 }
