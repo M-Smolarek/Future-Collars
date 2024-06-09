@@ -1,0 +1,17 @@
+.div_parent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  aspect-ratio: 1/1;
+  margin: auto;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+.div_child {
+  width: 30%;
+  height: 50px;
+  background-color: green;
+  margin-right: 5%;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
