@@ -1,0 +1,15 @@
+.div_setup {
+  display: flex;
+  width: 640px;
+  height: 600px;
+  border: 1px solid red;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen (max-width: 768px) {
+  .div_setup {
+    width: 94%;
+  }
+}
