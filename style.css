@@ -1,0 +1,19 @@
+.div_main {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 600px;
+  margin: auto;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+.div_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  box-sizing: border-box;
+  width: 33.33%;
+  height: 100%;
+}
