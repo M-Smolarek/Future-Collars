@@ -6,9 +6,10 @@
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
-@media screen (max-width: 768px) {
+@media (max-width: 768px) {
   .div_setup {
     width: 94%;
     margin: auto;
