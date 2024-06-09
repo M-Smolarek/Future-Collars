@@ -1,0 +1,6 @@
+.property {
+  width: 100%;
+}
+.property:nth-of-type(even) {
+  text-align: center;
+}
