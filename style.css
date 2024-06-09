@@ -1,0 +1,33 @@
+.div_parent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  aspect-ratio: 1/1;
+  margin: auto;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+.button_properties {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #24ad98;
+  color: white;
+  font-weight: 800;
+  padding: 20px 40px;
+}
+
+@media (min-width: 768px) {
+  .button_properties {
+    width: auto;
+    margin: auto;
+  }
+}
+
+@media (hover: hover) {
+  .button_properties:hover {
+    color: #24ad98;
+    background-color: white;
+  }
+}
