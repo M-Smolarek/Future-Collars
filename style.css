@@ -1,16 +1,15 @@
 .div_parent {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  width: 90%;
   aspect-ratio: 1/1;
   margin: auto;
   border: 1px solid red;
   box-sizing: border-box;
-}
-.button_properties {
-  display: flex;
   justify-content: center;
   align-items: center;
+}
+.button_properties {
   width: 100%;
   background-color: #24ad98;
   color: white;
@@ -19,9 +18,11 @@
 }
 
 @media (min-width: 768px) {
+  .div_parent {
+    width: 640px;
+  }
   .button_properties {
     width: auto;
-    margin: auto;
   }
 }
 
