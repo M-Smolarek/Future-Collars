@@ -1,6 +1,6 @@
 .div_setup {
   display: flex;
-  width: 640px;
+  width: 94%;
   height: 600px;
   border: 1px solid red;
   box-sizing: border-box;
@@ -9,9 +9,8 @@
   margin: auto;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .div_setup {
-    width: 94%;
-    margin: auto;
+    width: 640px;
   }
 }
