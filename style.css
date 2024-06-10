@@ -6,7 +6,8 @@
   margin: auto;
   border: 1px solid red;
   box-sizing: border-box;
-  transition: 1s;
+  transition-duration: 1s;
+  transition-property: border;
 }
 @media (hover: hover) {
   .div_parent:hover {
