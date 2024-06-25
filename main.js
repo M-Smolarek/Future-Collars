@@ -3,5 +3,5 @@ const car = {
   price: 50000,
   led: true,
   color: "blue",
-  arrayNumbers: [1, 2, 3],
+  numbers: [1, 2, 3],
 };
