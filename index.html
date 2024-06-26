@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funkcja potęgowania</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Funkcja potęgowania:</h1>
+        <form class="active_field_1" id="active_field_1_id"
+            <label class="label_class" for = "id_input_1">Wpisz podstawę potęgi:</label>
+            <input
+                type:"number"
+                id="id_input_1"
+                name="input_1_name"
+                placeholder="np. 123"
+                class="input_class"
+                required
+            />
+            <button class="button_properties" type="submit">Zatwierdź zmienną</button>
+        </form>
+        <p id="input_1_result"></p>
+        <form class="active_field_2" id="active_field_2_id"
+            <label class="label_class" for = "id_input_2">Wpisz wykładnik potęgi:</label>
+            <input
+                type:"number"
+                id="id_input_2"
+                name="input_2_name"
+                placeholder="np. 123"
+                class="input_class"
+                required
+            />
+            <button class="button_properties" type="submit">Zatwierdź zmienną</button>
+        </form>
+        <p id="input_2_result"></p>
+        <div class="result_class">
+            <p>Wynik potęgowania:</p>
+            <p class="result_value_class">id="pow(value)</p>
+        </div>
+    <script src="main.js"></script>
+  </body>
+</html>
