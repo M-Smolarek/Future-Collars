@@ -7,12 +7,12 @@
   border: 5px solid rgb(0, 255, 21);
   gap: 20px;
 }
-.ImieClass {
+.name_class {
   padding: 8px 8px;
   font-size: 14px;
   border-radius: 4px;
 }
-.ImieClass::placeholder {
+.name_class::placeholder {
   color: rgb(0, 119, 255);
   font-style: italic;
   font-size: 13px;
