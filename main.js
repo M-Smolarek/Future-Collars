@@ -7,7 +7,7 @@ const sayHello = (parameter_name) => {
 
 var_form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const value = event.target.input_name.value.trim();
-  var_result.textContent = sayHello(value);
+  const value_from_input = event.target.input_name.value.trim();
+  var_result.textContent = sayHello(value_from_input);
   var_result.style.color = "red";
 });
