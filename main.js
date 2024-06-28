@@ -9,3 +9,5 @@ const filterItems = (sumArray) => {
     return number > 0;
   });
 };
+
+console.log(filterItems(combineElements));
