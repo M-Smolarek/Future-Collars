@@ -9,38 +9,36 @@
   <body>
     <main class="container">
       <h1>Porównanie liczb:</h1>
-      <form class="active_field" id="active_field_id">
-        <div class="div_class">
-          <label class="label_class" for="id_input_1"
+      <form class="activeField" id="activeFieldId">
+        <div class="divClass">
+          <label class="labelClass" for="idInput1"
             >Wpisz pierwszą liczbę:</label
           >
           <input
             type="number"
-            id="id_input_1"
-            name="input_1_name"
+            id="idInput1"
+            name="input1Name"
             placeholder="np. 123"
-            class="input_class"
+            class="inputClass"
             required
           />
         </div>
-        <div class="div_class">
-          <label class="label_class" for="id_input_2"
-            >Wpisz drugą liczbę:</label
-          >
+        <div class="divClass">
+          <label class="labelClass" for="idInput2">Wpisz drugą liczbę:</label>
           <input
             type="number"
-            id="id_input_2"
-            name="input_2_name"
+            id="idInput2"
+            name="input2Name"
             placeholder="np. 123"
-            class="input_class"
+            class="inputClass"
             required
           />
         </div>
-        <button class="button_properties" type="submit">Porównaj</button>
+        <button class="buttonProperties" type="submit">Porównaj</button>
       </form>
-      <div class="result_class">
+      <div class="resultClass">
         <p>Wskaźnik porównania:</p>
-        <p class="result_value_class" id="result_id">-</p>
+        <p class="resultValueClass" id="resultId">-</p>
       </div>
     </main>
     <script src="main.js"></script>
