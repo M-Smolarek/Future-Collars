@@ -19,7 +19,7 @@ const przykladowyTekst2 = document.getElementById("h1Id");
 function fillElement(a) {
   const spanStart = document.createElement("<span>");
   const spanEnd = document.createElement("</span>");
-  return `Element, spanStart, a, spanEnd`;
+  return `spanStart, a, spanEnd`;
   console.log(fillElement(przykladowyTekst));
 }
 
