@@ -1,19 +1,13 @@
-// document.addEventListener("DOMContentLoaded", function () {});
-//   const przykladowyTekst = document.getElementById("h1Id");
-//   console.log(przykladowyTekst);
-// });
+const fillElement = (text) => {
+  const spanFunction = document.createElement("span");
+  spanFunction.textContent = text;
+  return spanFunction;
+};
 
-const przykladowyTekst = "Przykładowy tekst";
+const h1Text = document.getElementById("h1Id")?.textContent;
 
-const przykladowyTekst2 = document.getElementById.innerText("h1Id");
+const section = document.getElementById("sectionId");
 
-// console.log(przykladowyTekst);
+const span = fillElement(h1Text);
 
-console.log(przykladowyTekst2);
-
-const span = document.createElement("span");
-
-span.innerText = przykladowyTekst.innerText;
-
-const sectionContainer = document.getElementById("spanId");
-sectionContainer.appendChild(span);
+section.appendChild(span);
