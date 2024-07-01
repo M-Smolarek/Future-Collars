@@ -6,8 +6,8 @@ const fillElement = (text) => {
 
 const h1Text = document.getElementById("h1Id")?.textContent;
 
-const section = document.getElementById("sectionId");
+const varSection = document.getElementById("sectionId");
 
 const span = fillElement(h1Text);
 
-section.appendChild(span);
+varSection.appendChild(span);
