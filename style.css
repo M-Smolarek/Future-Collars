@@ -1,0 +1,51 @@
+.containter {
+  width: fit-content;
+  margin: auto;
+}
+.activeField {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  border: 5px solid rgb(0, 225, 255);
+  gap: 20px;
+  padding: 20px;
+}
+.divClass {
+  display: flex;
+}
+
+.labelClass {
+  width: fit-content;
+}
+.nameClass {
+  padding: 8px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.nameClass::placeholder {
+  color: rgb(0, 119, 255);
+  font-style: italic;
+  font-size: 13px;
+}
+.buttonProperties {
+  background-color: #24ad98;
+  color: white;
+  font-weight: 800;
+  padding: 6px 8px;
+}
+.listClass {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 50px;
+  border: 5px solid rgb(255, 166, 0);
+  gap: 20px;
+  padding: 20px;
+}
+.listValueClass {
+  border: 3px solid rgb(0, 255, 21);
+  border-radius: 5px;
+  padding: 5px;
+}

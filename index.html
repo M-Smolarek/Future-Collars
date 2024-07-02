@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="containter">
+      <h1>Przygotujmy listę zakupów:</h1>
+      <form class="activeField" id="activeFieldId">
+        <div class="divClass">
+          <label class="labelClass" for="idInput"
+            >Dodaj produkt do listy:</label
+          >
+          <input
+            type="text"
+            id="idInput"
+            name="inputName"
+            placeholder="np. mleko"
+            class="inputClass"
+            required
+          />
+        </div>
+        <button class="buttonProperties" type="submit">Zatwierdź</button>
+      </form>
+      <ol class="listClass" id="list">
+        Lista zakupów:
+        <li class="listValueClass" id="resultId">-</li>
+      </ol>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
