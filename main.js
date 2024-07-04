@@ -8,6 +8,6 @@ setTimeout(() => {
 
 button.addEventListener("submit", (event) => {
   event.preventDefault();
-  const announcement_text = event.target.buttonName.value.trim();
-  announcement.textContent = setTimeout(announcement_text);
+  const announcementContent = event.target.buttonName.value.trim();
+  announcement.textContent = setTimeout(announcementContent);
 });
