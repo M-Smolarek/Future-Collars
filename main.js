@@ -11,6 +11,7 @@ const createList = () => {
     li.textContent = product;
     completeList.appendChild(li);
   });
+  return completeList;
 };
 
 varForm.addEventListener("submit", (event) => {
