@@ -9,12 +9,13 @@ button.addEventListener("click", () => {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       if (data?.length > 0 && data[0].url) {
         const IMG = document.createElement("img");
         IMG.src = data[0].url;
         IMG.setAttribute("data-test", "img-kitty");
         document.body.appendChild(IMG);
+      } else {
+        alert("Brak obrazka");
       }
     })
     .catch((error) => {
