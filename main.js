@@ -1,6 +1,10 @@
-const addTodoElem = document.getElementById("idButton");
+const form = document.getElementById("idForm");
 
-addTodoElem.addEventListener("click", (event) => {
+const addTodoElem = (event) => {
   event.preventDefault();
-  axios.post("https://jsonplaceholder.typicode.com/posts");
-});
+  axios.post("https://jsonplaceholder.typicode.com/posts", {
+    title: event.target.nameInput.value.trim(),
+  });
+};
+
+form.addEventListener("submit", addTodoElem);
