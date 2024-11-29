@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+.content {
+  width: 90%;
+  margin: auto;
+}
+.topBanner {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  background-color: grey;
+}
+.topBannerContent {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.navigation {
+  display: none;
+}
+.navigationItem {
+  color: white;
+  text-decoration: none;
+}
+@media (min-width: 1024px) {
+  .content {
+    width: 960px;
+  }
+  .navigation {
+    display: flex;
+    gap: 32px;
+  }
+}
+@media (hover: hover) {
+  .navigationItemDisabled:hover {
+    cursor: not-allowed;
+  }
+}
