@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 .content {
   width: 90%;
@@ -88,7 +89,6 @@
 }
 .services {
   display: flex;
-  height: 400px;
   background-color: lightblue;
 }
 
@@ -98,6 +98,7 @@
     width: 90%;
     margin: auto;
     gap: 15px;
+    margin-bottom: 40px;
   }
 .servicesHeader {
     display: flex;
@@ -109,7 +110,56 @@
     display: flex;
     width: 80%;
     flex-direction: column;
+    justify-content: center;
+    gap: 20px;
     margin: auto;
+
+}
+.servicesBox {
+  display: flex;
+  width: 120px;
+  background-color: white;
+  aspect-ratio: 1/1;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+.serviceNew {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: orange;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+.bottomBanner {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  background-color: grey;
+}
+.bottomBannerContent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.bottomNavigation {
+  display: flex;
+  gap: 15px;
+}
+.instagramLogo {
+  height: 20px;
+  width: 20px;
+  background-image: url("instagram.jpg");
+}
+.facebookLogo {
+  height: 20px;
+  width: 20px;
+  background-image: url("facebook.jpg");
 }
 @media (min-width: 724px) {
   .content {
@@ -132,6 +182,11 @@
     width: 520px;
   }
   .servicesBoxes {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bottomBannerContent {
     flex-direction: row;
   }
 }
