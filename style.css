@@ -41,6 +41,7 @@
 }
 .mainSectionProducts {
   font-size: 26px;
+  width: 300px;
 }
 .mainSectionOffer {
   display: flex;
@@ -133,7 +134,7 @@
 }
 .bottomBanner {
   display: flex;
-  height: 50px;
+  height: 95px;
   align-items: center;
   background-color: grey;
 }
@@ -170,6 +171,9 @@
     display: flex;
     gap: 32px;
   }
+  .mainSectionProducts {
+    width: 400px;
+  }
   .coworkersContent {
     width: 520px;
   }
@@ -183,6 +187,9 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+  }
+  .bottomBanner {
+    height: 65px;
   }
   .bottomBannerContent {
     flex-direction: row;
