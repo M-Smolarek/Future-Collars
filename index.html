@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML-CSS-Projekt_2</title>
     <link rel="stylesheet" href="reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -20,41 +24,54 @@
         </section>
       </header>
       <section class="mainSection">
-        <section class="content mainSectionContent">
-          <div class="mainSectionProducts">
-            Nasza firma oferuje najwyższej jakości produkty.
-          </div>
-          <div>Nie wierz nam na słowo - sprawdź</div>
-          <div">
-            <div class="mainSectionOffer">oferta</div>
-          </div>
-        </section>
+        <div class="mainSectionShadow">
+          <section class="content mainSectionContent">
+            <h1 class="mainSectionProducts">
+              Nasza firma oferuje najwyższej jakości produkty.
+            </h1>
+            <div>Nie wierz nam na słowo - sprawdź</div>
+            <div>
+              <a href="#oferta" class="mainSectionOffer">oferta</a>
+            </div>
+          </section>
+        </div>
       </section>
-
-      <section class="coworkers">
-        <section class="coworkersContent">
+      <section id="o-nas">
+        <section class="content coworkersContent">
           <h2 class="coworkersHeader">Nasi specjaliści</h2>
           <div class="coworker">
-            <div class="coworkerPic"></div>
+            <img class="coworkerPic" src="silhouette.jpg" alt="coworker" />
             <div class="coworkerDescription">
               <div class="coworkerDescriptionName">Imię Nazwisko [ dział ]</div>
-              <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, dicta inventore minima velit quibusdam laborum beatae quo sit ullam quod et! Doloremque nemo laboriosam quae dignissimos necessitatibus. Excepturi, sint facere!</div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Deserunt, dicta inventore minima velit quibusdam laborum beatae
+                quo sit ullam quod et! Doloremque nemo laboriosam quae
+                dignissimos necessitatibus. Excepturi, sint facere!
+              </p>
             </div>
           </div>
           <div class="coworker">
+            <img class="coworkerPic" src="silhouette.jpg" alt="coworker" />
             <div class="coworkerDescription">
               <div class="coworkerDescriptionName">Imię Nazwisko [ dział ]</div>
-              <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, dicta inventore minima velit quibusdam laborum beatae quo sit ullam quod et! Doloremque nemo laboriosam quae dignissimos necessitatibus. Excepturi, sint facere!</div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Deserunt, dicta inventore minima velit quibusdam laborum beatae
+                quo sit ullam quod et! Doloremque nemo laboriosam quae
+                dignissimos necessitatibus. Excepturi, sint facere!
+              </p>
             </div>
-            <div class="coworkerPic"></div>
           </div>
         </section>
       </section>
-      <section class="services">
-        <section class="servicesContent">
+      <section class="services" id="oferta">
+        <section class="content servicesContent">
           <h2 class="servicesHeader">Czym zajmuje się nasza firma?</h2>
           <div class="servicesBoxes">
-            <div class="servicesBox">Usługa 1 (nowość)
+            <div class="servicesBox">
+              <p>Usługa 1</p>
+              <p>(nowość)</p>
               <div class="serviceNew"></div>
             </div>
             <div class="servicesBox">Usługa 2</div>
@@ -71,7 +88,6 @@
           <div class="bottomNavigation">
             <div class="instagramLogo"></div>
             <div class="facebookLogo"></div>
-          
           </div>
         </section>
       </footer>

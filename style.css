@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Roboto;
+}
+html,
+body {
+  scroll-behavior: smooth;
 }
 .content {
   width: 90%;
@@ -25,42 +29,44 @@
   text-decoration: none;
 }
 .mainSection {
-  display: flex;
-  height: 400px;
-  align-items: center;
-  background-color: yellow;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   background-image: url("fog-over-woods.jpg");
+}
+.mainSectionShadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 100vh;
 }
 .mainSectionContent {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
   text-wrap: wrap;
   color: white;
+  height: 100vh;
 }
 .mainSectionProducts {
   font-size: 26px;
-  width: 300px;
+  width: 100%;
 }
 .mainSectionOffer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  width: 100px;
   border: 3px solid white;
-}
-.coworkers {
-  display: flex;
-  height: 400px;
-  background-color: magenta;
+  display: block;
+  width: fit-content;
+  padding: 5px 45px;
+  text-decoration: none;
+  color: white;
 }
 .coworkersContent {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: auto;
   gap: 15px;
 }
 .coworkersHeader {
@@ -73,30 +79,28 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
-.coworkerPic {
-  height: 100px;
-  width: 100px;
-  background-image: url("silhouette.jpg");
-}
-.coworkerDescrition {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 30px;
   align-items: center;
 }
-.coworkerDescritionName {
+.coworkerPic {
+  height: 200px;
+  width: 200px;
+  min-width: 200px;
+  border-radius: 50%;
+}
+.coworkerDescription {
   display: flex;
-  height: 20px;
+  flex-direction: column;
+}
+.coworkerDescriptionName {
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 .services {
   display: flex;
   background-color: lightblue;
 }
 .servicesContent {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
   gap: 15px;
   margin-bottom: 40px;
 }
@@ -107,20 +111,20 @@
   font-size: 26px;
 }
 .servicesBoxes {
-  display: flex;
-  width: 80%;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 250px;
   gap: 20px;
-  margin: auto;
+  justify-content: center;
 }
 .servicesBox {
   display: flex;
-  width: 120px;
+  flex-direction: column;
   background-color: white;
   aspect-ratio: 1/1;
   text-align: center;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
   position: relative;
 }
 .serviceNew {
@@ -160,12 +164,9 @@
   width: 20px;
   background-image: url("facebook.jpg");
 }
-@media (min-width: 724px) {
+@media (min-width: 1024px) {
   .content {
-    width: 560px;
-  }
-  .coworkersContent {
-    width: 520px;
+    width: 960px;
   }
   .navigation {
     display: flex;
@@ -174,19 +175,14 @@
   .mainSectionProducts {
     width: 400px;
   }
-  .coworkersContent {
-    width: 520px;
-  }
   .coworker {
     flex-direction: row;
   }
-  .servicesContent {
-    width: 520px;
+  .coworker:nth-of-type(even) {
+    flex-direction: row-reverse;
   }
   .servicesBoxes {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 250px);
   }
   .bottomBanner {
     height: 65px;
@@ -198,5 +194,8 @@
 @media (hover: hover) {
   .navigationItemDisabled:hover {
     cursor: not-allowed;
+  }
+  .mainSectionOffer:hover {
+    background-color: grey;
   }
 }
