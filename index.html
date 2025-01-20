@@ -13,37 +13,31 @@
       <section class="topLogo">
         <img class="budgetPic" src="budżet_domowy.jpg" />
       </section>
-      <h2 class="balanceResult">
-        Możesz jeszcze wydać: <span id="availableAmount"></span> zł
-      </h2>
+      <h2 id="availableAmount" class="balanceResult"></h2>
       <section class="familyBalance">
         <div class="balance">
           <div class="balanceBox">
-            <div>
-              <h2 class="balanceHeader">Przychody:</h2>
-              <form id="incomesFormID" class="incomesForm">
-                <input
-                  class="incomesInput"
-                  id="incomeNameID"
-                  name="incomeName"
-                  type="text"
-                  placeholder="Nazwa przychodu"
-                  required
-                />
-                <input
-                  class="incomesInput"
-                  id="incomeamountID"
-                  name="incomeAmount"
-                  type="number"
-                  placeholder="Kwota"
-                  min="0.01"
-                  step="0.01"
-                  required
-                />
-                <button type="submit">Dodaj</button>
-              </form>
-              <ul id="incomesList" class="list"></ul>
-            </div>
+            <h2 class="balanceHeader">Przychody:</h2>
+            <form id="incomesForm" class="incomesForm">
+              <input
+                class="incomesInput"
+                name="incomeName"
+                type="text"
+                placeholder="Nazwa przychodu"
+                required
+              />
+              <input
+                class="incomesInput"
+                name="incomeAmount"
+                type="number"
+                placeholder="Kwota"
+                min="0.01"
+                step="0.01"
+                required
+              />
+              <button type="submit">Dodaj</button>
+            </form>
+            <ul id="incomesList" class="list"></ul>
             <p class="balanceFooter">
               Suma przychodów: <span id="totalIncomes"></span> zł
             </p>
@@ -52,10 +46,9 @@
         <div class="balance">
           <div class="balanceBox">
             <h2 class="balanceHeader">Wydatki:</h2>
-            <form id="expensesFormID" class="incomesForm">
+            <form id="expensesForm" class="incomesForm">
               <input
                 class="incomesInput"
-                id="expenseNameID"
                 name="expenseName"
                 type="text"
                 placeholder="Nazwa wydatku"
@@ -63,7 +56,6 @@
               />
               <input
                 class="incomesInput"
-                id="expensesAmountID"
                 name="expenseAmount"
                 type="number"
                 placeholder="Kwota"

@@ -1,9 +1,19 @@
-const incomesForm = document.getElementById("incomesFormID");
+const incomesForm = document.getElementById("incomesForm");
 const incomesList = document.getElementById("incomesList");
 const totalIncomes = document.getElementById("totalIncomes");
 const incomes = [];
+const expensesForm = document.getElementById("expensesForm");
+const expensesList = document.getElementById("expensesList");
+const totalExpesnes = document.getElementById("totalExpenses");
+const expenses = [];
 
-// renderTotalIncomes(); - po co to jest?
+renderTotalIncomes();
+
+renderTotalExpenses();
+
+const available = document.getElementById("availableAmount");
+
+renderAvailable();
 
 incomesForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -37,18 +47,21 @@ function renderIncomesList() {
     deleteButton.textContent = "Usuń";
     deleteButton.id = "delete";
 
+    deleteButton.addEventListener("click", () => {
+      const index = incomes.findIndex((income) => income.id === item.id);
+      if (index > -1) {
+        incomes.splice(index, 1);
+        renderIncomesList();
+        renderTotalIncomes();
+      }
+    });
+
     element.appendChild(editButton);
     element.appendChild(deleteButton);
     incomesList.appendChild(element);
   });
+  renderAvailable();
 }
-
-incomesList.addEventListener("click", function (event) {
-  if ((event.target.id = "delete")) {
-    event.target.parentElement.remove();
-    incomesList.replaceChildren();
-  }
-});
 
 function renderTotalIncomes() {
   const sumIncomes = incomes.reduce((acc, cur) => acc + cur.amount, 0);
@@ -56,13 +69,6 @@ function renderTotalIncomes() {
 }
 
 ////////////// WYDATKI
-
-const expensesForm = document.getElementById("expensesFormID");
-const expensesList = document.getElementById("expensesList");
-const totalExpesnes = document.getElementById("totalExpenses");
-const expenses = [];
-
-// renderTotalIncomes(); - po co to jest?
 
 expensesForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -98,6 +104,7 @@ function renderExpensesList() {
     element.appendChild(deleteButton);
     expensesList.appendChild(element);
   });
+  renderAvailable();
 }
 
 function renderTotalExpenses() {
@@ -106,7 +113,18 @@ function renderTotalExpenses() {
 }
 
 function renderAvailable() {
-  const availableAmount = 5;
-  totalAvailable.textContent = `${availableAmount}`;
+  const sumIncomes = incomes.reduce((acc, cur) => acc + cur.amount, 0);
+  const sumExpenses = expenses.reduce((acc, cur) => acc + cur.amount, 0);
+  const result = sumIncomes - sumExpenses;
+  if (result === 0) {
+    available.textContent = "Budżet się zamyka";
+    return;
+  }
+  if (result > 0) {
+    available.textContent = `Pozostało jeszcze ${result.toFixed(2)} zł`;
+    return;
+  }
+  available.textContent = `Budżet przekroczony o ${Math.abs(result).toFixed(
+    2
+  )} zł`;
 }
-// console.log(availableAmount(value));
