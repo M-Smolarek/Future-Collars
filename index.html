@@ -17,9 +17,8 @@
         <div class="amount">
           <h2 class="amountHeader">Wartość w walucie obcej</h2>
           <input
-            id="input"
-            class="inputStyle"
-            name="inputAmount"
+            class="amountStyle"
+            name="amount"
             type="number"
             placeholder="np.: 5, 10, 100, 200 itp."
             min="0.01"
@@ -29,19 +28,19 @@
         </div>
         <div class="currencySelectStyle">
           <h2 class="unitHeader">Waluta</h2>
-          <select id="select" class="selectStyle">
-            <option id="Euro">EUR</option>
-            <option id="Dolar">USD</option>
-            <option id="Frank">CHF</option>
+          <select name="currency" class="selectStyle">
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="CHF">CHF</option>
           </select>
-          <button id="button" type="submit">Przelicz</button>
+          <button type="submit" name="convert">Przelicz</button>
         </div>
         <div class="resultStyle">
           <h2 class="resultHeader">Wartość w PLN</h2>
           <p class="resultField"><span id="result"></span></p>
-          </p>
         </div>
       </form>
+      <p id="errorMessage"></p>
     </main>
     <script src="main.js"></script>
   </body>
