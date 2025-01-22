@@ -1,9 +1,13 @@
 import styles from "./PicSection.module.css";
 
-const PicSection = () => {
+export const PicSection = () => {
   return (
     <section className={styles.topLogo}>
-      <img className={styles.currencyPic} src="/images/currency.jpg" />
+      <img
+        className={styles.currencyPic}
+        src="/images/currency.jpg"
+        alt="currency"
+      />
     </section>
   );
 };
