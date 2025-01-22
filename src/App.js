@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { TopBanner } from "./components/TopBanner/TopBanner";
 import { PicSection } from "./components/PicSection/PicSection";
