@@ -72,6 +72,28 @@
           </div>
         </div>
       </section>
+      <div id="modal" class="modal">
+        <form id="editForm">
+          <input
+            class="input"
+            id="editName"
+            type="text"
+            placeholder="Nazwa wydatku"
+            required
+          />
+          <input
+            class="input"
+            id="editAmount"
+            type="number"
+            placeholder="Kwota"
+            min="0.01"
+            step="0.01"
+            required
+          />
+          <button type="submit">Zapisz</button>
+          <button id="modalCancel" type="button">Anuluj</button>
+        </form>
+      </div>
     </main>
     <script src="main.js"></script>
   </body>

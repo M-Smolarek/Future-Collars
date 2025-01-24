@@ -6,6 +6,15 @@ const expensesForm = document.getElementById("expensesForm");
 const expensesList = document.getElementById("expensesList");
 const totalExpesnes = document.getElementById("totalExpenses");
 const expenses = [];
+const modal = document.getElementById("modal");
+const modalCancel = document.getElementById("modalCancel");
+const editName = document.getElementById("editName");
+const editAmount = document.getElementById("editAmount");
+const editForm = document.getElementById("editForm");
+
+modalCancel.addEventListener("click", () => {
+  modal.style.display = "none";
+});
 
 renderTotalIncomes();
 
@@ -35,14 +44,31 @@ incomesForm.addEventListener("submit", (event) => {
 function renderIncomesList() {
   incomesList.replaceChildren();
 
-  incomes.forEach((item) => {
+  incomes.forEach((item, index) => {
     const element = document.createElement("li");
     element.textContent = `${item.name}: ${item.amount} PLN`;
     element.classList.add("list-item");
 
     const editButton = document.createElement("button");
     editButton.textContent = "Edytuj";
-    editButton.id = "edit";
+
+    editButton.addEventListener("click", () => {
+      modal.style.display = "block";
+      editName.value = item.name;
+      editAmount.value = item.amount;
+
+      const handleEditSubmit = (event) => {
+        event.preventDefault();
+        incomes[index].name = editName.value;
+        incomes[index].amount = Number(editAmount.value);
+        modal.style.display = "none";
+        editForm.removeEventListener("submit", handleEditSubmit);
+        renderIncomesList();
+        renderTotalIncomes();
+      };
+      editForm.addEventListener("submit", handleEditSubmit);
+    });
+
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Usuń";
     deleteButton.id = "delete";
@@ -90,14 +116,31 @@ expensesForm.addEventListener("submit", (event) => {
 function renderExpensesList() {
   expensesList.replaceChildren();
 
-  expenses.forEach((item) => {
+  expenses.forEach((item, index) => {
     const element = document.createElement("li");
     element.textContent = `${item.name}: ${item.amount} PLN`;
     element.classList.add("list-item");
 
     const editButton = document.createElement("button");
     editButton.textContent = "Edytuj";
-    editButton.id = "edit";
+
+    editButton.addEventListener("click", () => {
+      modal.style.display = "block";
+      editName.value = item.name;
+      editAmount.value = item.amount;
+
+      const handleEditSubmit = (event) => {
+        event.preventDefault();
+        expenses[index].name = editName.value;
+        expenses[index].amount = Number(editAmount.value);
+        modal.style.display = "none";
+        editForm.removeEventListener("submit", handleEditSubmit);
+        renderExpensesList();
+        renderTotalExpenses();
+      };
+      editForm.addEventListener("submit", handleEditSubmit);
+    });
+
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Usuń";
     deleteButton.id = "delete";
