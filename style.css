@@ -76,14 +76,14 @@
   border-width: 10px;
   border-radius: 5px;
 }
-.incomesForm {
+.balanceForm {
   display: flex;
   box-sizing: border-box;
   width: 100%;
   gap: 3px;
   padding: 3px 3px;
 }
-.incomesInput {
+.input {
   box-sizing: border-box;
   width: 100%;
 }

@@ -97,8 +97,19 @@ function renderExpensesList() {
 
     const editButton = document.createElement("button");
     editButton.textContent = "Edytuj";
+    editButton.id = "edit";
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Usuń";
+    deleteButton.id = "delete";
+
+    deleteButton.addEventListener("click", () => {
+      const index = expenses.findIndex((expense) => expense.id === item.id);
+      if (index > -1) {
+        expenses.splice(index, 1);
+        renderExpensesList();
+        renderTotalExpenses();
+      }
+    });
 
     element.appendChild(editButton);
     element.appendChild(deleteButton);
