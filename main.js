@@ -34,7 +34,7 @@ form.addEventListener("submit", (event) => {
       }
     })
     .catch(() => {
-      errorMessage.textContent = "Błąd pobieranych danych";
+      errorMessage.textContent = "Błąd po bieranych danych";
     })
     .finally(() => {
       button.disabled = false;
